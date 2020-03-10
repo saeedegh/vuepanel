@@ -2,7 +2,8 @@ html.md-theme-default {
     direction: rtl;
 }
 
-.sidebar,
+
+/* .sidebar,
 .off-canvas-sidebar {
     left: auto;
     right: 0;
@@ -10,4 +11,4 @@ html.md-theme-default {
 
 .main-panel {
     float: left;
-}
+} */

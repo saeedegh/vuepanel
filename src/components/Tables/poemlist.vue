@@ -26,7 +26,6 @@
       :per-page="perPage"
       :current-page="currentPage"
       :fields="fields"
-      
     >
       <template v-slot:cell(ردیف)="data">{{
         14 * (currentPage - 1) + data.index + 1
@@ -81,6 +80,7 @@
 </template>
 
 <script>
+
 export default {
   name: "ordered-table",
   props: {
@@ -150,6 +150,8 @@ export default {
 };
 </script>
 <style scoped>
+@import "../../assets/css/bootstrap.css";
+@import "../../assets/css/bootstrap-vue.css";
 .md-card img {
   width: 50px;
   height: 50px;

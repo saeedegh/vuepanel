@@ -29,8 +29,7 @@ import Notifications from "./components/NotificationPlugin";
 // MaterialDashboard plugin
 import MaterialDashboard from "./material-dashboard";
 import "./assets/css/customstyle.css"
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue/dist/bootstrap-vue.css";
+
 
 import vueResource from "vue-resource";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
