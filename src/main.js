@@ -28,8 +28,12 @@ import Notifications from "./components/NotificationPlugin";
 
 // MaterialDashboard plugin
 import MaterialDashboard from "./material-dashboard";
-import vueResource from 'vue-resource';
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
+import "./assets/css/customstyle.css"
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+
+import vueResource from "vue-resource";
+import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 
 import Chartist from "chartist";
 
@@ -49,7 +53,6 @@ Vue.use(Notifications);
 Vue.use(vueResource);
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
-
 
 /* eslint-disable no-new */
 new Vue({
