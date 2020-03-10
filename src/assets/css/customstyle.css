@@ -1,3 +1,13 @@
 html.md-theme-default {
     direction: rtl;
 }
+
+.sidebar,
+.off-canvas-sidebar {
+    left: auto;
+    right: 0;
+}
+
+.main-panel {
+    float: left;
+}

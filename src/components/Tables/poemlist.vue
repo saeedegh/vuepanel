@@ -9,7 +9,8 @@
         <md-table-cell md-label="City">{{ item.city }}</md-table-cell>
       </md-table-row>
     </md-table>
-
+    <br />
+    <br />
     <div
       v-if="!dataLoaded"
       id="progressEl"
@@ -25,7 +26,7 @@
       :per-page="perPage"
       :current-page="currentPage"
       :fields="fields"
-      small
+      
     >
       <template v-slot:cell(ردیف)="data">{{
         14 * (currentPage - 1) + data.index + 1
