@@ -10,8 +10,13 @@
       </md-table-row>
     </md-table>-->
 
-    <div v-if="!dataLoaded" id="progressEl" class="text-center">
-      <img src="../../assets/img/p3.gif" alt="progressbar" height="50" width="50" />
+    <div
+      v-if="!dataLoaded"
+      id="progressEl"
+      class="text-center"
+      style="z-index:1000"
+    >
+      <img src="../../assets/img/progress.gif" alt="progressbar" />
     </div>
 
     <b-table
@@ -22,22 +27,38 @@
       :fields="fields"
       small
     >
-      <template v-slot:cell(ردیف)="data">{{14*(currentPage-1)+ data.index + 1 }}</template>
-      <template v-slot:cell(عنوان)="data">{{ data.item.title}}</template>
+      <template v-slot:cell(ردیف)="data">{{
+        14 * (currentPage - 1) + data.index + 1
+      }}</template>
+      <template v-slot:cell(عنوان)="data">{{ data.item.title }}</template>
       <template v-slot:cell(کتاب)="data">
-        <div v-if="data.item.book">{{ data.item.book.name}}</div>
+        <div v-if="data.item.book">{{ data.item.book.name }}</div>
         <div v-else></div>
       </template>
-      <template v-slot:cell(شاعر)="data">{{ data.item.poets[0].name}}</template>
+      <template v-slot:cell(شاعر)="data">{{
+        data.item.poets[0].name
+      }}</template>
       <template v-slot:cell(وضعیت)="data">
-        <div v-if="data.item.ispublished" href="#" class="btn btn-outline-success">منتشر شده</div>
+        <div
+          v-if="data.item.ispublished"
+          href="#"
+          class="btn btn-outline-success"
+        >
+          منتشر شده
+        </div>
         <div v-else href="#" class="btn btn-outline-danger">منتشر نشده</div>
       </template>
       <template v-slot:cell(عملیات)="data">
         <a>
-          <i class="material-icons text-secondary text-danger">delete_forever</i>
+          <i class="material-icons text-secondary text-danger"
+            >delete_forever</i
+          >
         </a>
-        <a :href="'http://localhost:5969/manage/poem/edit/?item-id=' + data.item._id">
+        <a
+          :href="
+            'http://localhost:5969/manage/poem/edit/?item-id=' + data.item._id
+          "
+        >
           <i class="material-icons text-secondary">edit</i>
         </a>
       </template>
@@ -92,8 +113,14 @@ export default {
       .then(response => {
         this.response = response;
         this.items = response.items;
+        this.dataLoaded = true;
       });
-    this.dataLoaded = true;
   }
 };
 </script>
+<style scoped>
+.md-card img {
+  width: 50px;
+  height: 50px;
+}
+</style>
