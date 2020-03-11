@@ -12,6 +12,14 @@ html.md-theme-default {
     float: left;
 }
 
+tbody tr:hover td {
+    background-color: transparent !important;
+}
+
+tbody tr:hover {
+    background: #f5f5f5 !important;
+}
+
 .table th {
     padding: 0.75rem;
 }
@@ -52,7 +60,7 @@ i.material-icons:hover {
 }
 
 .page-item.active .page-link {
-    background-color: #f44336;
+    background-color: #e91e63;
     border-color: none;
 }
 
