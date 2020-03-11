@@ -11,3 +11,61 @@ html.md-theme-default {
 .main-panel {
     float: left;
 }
+
+.table th {
+    padding: 0.75rem;
+}
+
+.table td {
+    text-align: center;
+    padding: 0.75rem 0.75rem 0;
+}
+
+.table thead th {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.54);
+    border-bottom: 1px solid #dee2e6;
+}
+
+.table th {
+    border-top: none;
+}
+
+.table thead th {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+i.material-icons:hover {
+    transform: scale(1.5);
+}
+
+.p-container {
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.page-link {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    color: #3c4858;
+}
+
+.page-item.active .page-link {
+    background-color: #f44336;
+    border-color: none;
+}
+
+.page-item.disabled .page-link {
+    background-color: transparent;
+}
+
+.page-link:focus {
+    z-index: 3;
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
+
+.page-link:hover {
+    color: gray;
+}

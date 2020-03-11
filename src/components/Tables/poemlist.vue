@@ -11,12 +11,7 @@
     </md-table>
     <br />
     <br />
-    <div
-      v-if="!dataLoaded"
-      id="progressEl"
-      class="text-center"
-      style="z-index:1000"
-    >
+    <div v-if="!dataLoaded" id="progressEl" class="text-center" style="z-index:1000">
       <img src="../../assets/img/progress.gif" alt="progressbar" />
     </div>
 
@@ -27,32 +22,28 @@
       :current-page="currentPage"
       :fields="fields"
     >
-      <template v-slot:cell(ردیف)="data">{{
+      <template v-slot:cell(ردیف)="data">
+        {{
         14 * (currentPage - 1) + data.index + 1
-      }}</template>
+        }}
+      </template>
       <template v-slot:cell(عنوان)="data">{{ data.item.title }}</template>
       <template v-slot:cell(کتاب)="data">
         <div v-if="data.item.book">{{ data.item.book.name }}</div>
         <div v-else></div>
       </template>
-      <template v-slot:cell(شاعر)="data">{{
+      <template v-slot:cell(شاعر)="data">
+        {{
         data.item.poets[0].name
-      }}</template>
+        }}
+      </template>
       <template v-slot:cell(وضعیت)="data">
-        <div
-          v-if="data.item.ispublished"
-          href="#"
-          class="btn btn-outline-success"
-        >
-          منتشر شده
-        </div>
+        <div v-if="data.item.ispublished" href="#" class="btn btn-outline-success">منتشر شده</div>
         <div v-else href="#" class="btn btn-outline-danger">منتشر نشده</div>
       </template>
       <template v-slot:cell(عملیات)="data">
         <a>
-          <i class="material-icons text-secondary text-danger"
-            >delete_forever</i
-          >
+          <i class="material-icons text-secondary text-danger">delete_forever</i>
         </a>
         <a
           :href="
@@ -68,7 +59,7 @@
       </template>
     </b-table>
 
-    <div class="row text-center">
+    <div class="row text-center p-container">
       <b-pagination
         v-model="currentPage"
         :total-rows="rows"
@@ -80,7 +71,6 @@
 </template>
 
 <script>
-
 export default {
   name: "ordered-table",
   props: {
