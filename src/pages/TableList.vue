@@ -4,27 +4,15 @@
       <div
         class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-100"
       >
-        <md-card>
-          <md-card-header data-background-color="green">
-            <h4 class="title">Simple Table</h4>
-            <p class="category">Here is a subtitle for this table</p>
-          </md-card-header>
-          <md-card-content>
-            <simple-table table-header-color="green"></simple-table>
-          </md-card-content>
-        </md-card>
-      </div>
-
-      <div
-        class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-100"
-      >
         <md-card class="md-card-plain">
           <md-card-header data-background-color="green">
-            <h4 class="title">Table on Plain Background</h4>
-            <p class="category">Here is a subtitle for this table</p>
+            <h4 class="title">لیست شعرها</h4>
+            <a href="http://localhost:5969/manage/poem/add">
+              <i class="material-icons material-add">add</i>
+            </a>
           </md-card-header>
           <md-card-content>
-            <ordered-table></ordered-table>
+            <poemlist></poemlist>
           </md-card-content>
         </md-card>
       </div>
@@ -33,12 +21,15 @@
 </template>
 
 <script>
-import { SimpleTable, OrderedTable } from "@/components";
-
+import { poemlist } from "@/components";
 export default {
   components: {
-    OrderedTable,
-    SimpleTable
+    poemlist
   }
 };
 </script>
+<style scoped>
+.md-card .md-card-header .title {
+  float: right;
+}
+</style>
