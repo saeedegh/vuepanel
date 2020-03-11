@@ -52,6 +52,12 @@ i.material-icons:hover {
     margin-top: 30px;
 }
 
+i.material-icons.material-add {
+    background-color: #fff;
+    color: #43a047;
+    border-radius: 50%;
+}
+
 .page-link {
     background-color: transparent;
     border: none;

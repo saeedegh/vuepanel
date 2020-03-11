@@ -6,8 +6,10 @@
       >
         <md-card class="md-card-plain">
           <md-card-header data-background-color="green">
-            <h4 class="title">Table on Plain Background</h4>
-            <p class="category">Here is a subtitle for this table</p>
+            <h4 class="title">لیست شعرها</h4>
+            <a href="http://localhost:5969/manage/poem/add">
+            <i class="material-icons material-add">add</i>
+          </a>
           </md-card-header>
           <md-card-content>
             <poemlist></poemlist>
